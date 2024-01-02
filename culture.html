@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NEPAL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/nepal1.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="index.html">NATURE.GO</a></h1>
+        <span id="toggle-btn" onclick="toggleNav()">☰</span>
+        <nav class="sidebar" id="sidebar">
+            
+            <ul>
+                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="temples.html">Temples</a></li>
+                <li><a href="mountains.html">Mountains</a></li>
+            </ul>
+            <span id="close-btn" onclick="toggleNav()">✕</span>
+        </nav>
+        
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var sidebar = document.getElementById('sidebar');
+            var toggleBtn = document.getElementById('toggle-btn');
+            var closeBtn = document.getElementById('close-btn');
+
+            function toggleNav() {
+                sidebar.classList.toggle('show');
+                
+            }
+
+            
+
+            toggleBtn.addEventListener('click', function () {
+                toggleNav();
+                document.addEventListener('click', closeNavOutside);
+            });
+
+            closeBtn.addEventListener('click', function () {
+                toggleNav();
+                document.removeEventListener('click', closeNavOutside);
+            });
+       
+        });
+
+    </script>
+
+
+    <section id="blog">
+        
+        <div class="blog-heading">
+            
+            <span>Recent Posts</span>
+            
+        </div>
+        
+        <div class="blog-container">
+            <div class="blog-box">
+                <div class="blog-img">
+                    <a href="home.html">
+                        <img src="images/culture1.jpg" alt="Blog">
+                    </a>
+                </div>
+                <div class="blog-text">
+                    <span>13 November 2023</span>
+                    <a href="home.html" class="blog-title">Culture of Nepal</a>
+                    <p>Nepal, nestled in the heart of the Himalayas, boasts a rich and diverse cultural tapestry that reflects its centuries-old history and the amalgamation of various ethnic groups. The cultural heritage of Nepal is deeply intertwined with its religious and social practices, creating a unique and vibrant atmosphere.
+
+                        Religion plays a pivotal role in Nepali culture, with Hinduism being the predominant faith. The country is dotted with ancient temples, stupas, and shrines, each telling a story of devotion and spirituality. Pashupatinath Temple in Kathmandu, a UNESCO World Heritage Site, stands as a testament to the significance of religion in Nepali life, attracting pilgrims and tourists alike.
+                    </p>
+                      
+                    <a href="home.html">Read More</a>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+
+    <script>
+        function toggleNav() {
+            var nav = document.querySelector('nav ul');
+            nav.style.visibility = (nav.style.visibility === 'visible') ? 'hidden' : 'visible';
+        }
+    </script>
+</body>
+
+</html>

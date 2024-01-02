@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width ,initial-scale=1">
+    <title>NEPAL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/nepal1.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="index.html">NATURE.GO</a></h1>
+        <span id="toggle-btn" onclick="toggleNav()">☰</span>
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="temples.html">Temples</a></li>
+                <li><a href="mountains.html">Mountains</a></li>
+            </ul>
+            <span id="close-btn" onclick="toggleNav()">✕</span>
+        </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var sidebar = document.getElementById('sidebar');
+            var toggleBtn = document.getElementById('toggle-btn');
+            var closeBtn = document.getElementById('close-btn');
+
+            function toggleNav() {
+                sidebar.classList.toggle('show');
+            }
+
+            
+
+            toggleBtn.addEventListener('click', function () {
+                toggleNav();
+                document.addEventListener('click', closeNavOutside);
+            });
+
+            closeBtn.addEventListener('click', function () {
+                toggleNav();
+                document.removeEventListener('click', closeNavOutside);
+            });
+        });
+    </script>
+
+    <section id="blog">
+        <div class="blog-heading">
+            <span>Recent Posts</span>
+            
+        </div>
+        <div class="blog-box9">
+        <div class="blog-container1">
+            <div class="blog-texthome">
+                <span>13 November 2023</span>
+                <a href="#" class="blog-title">Mountains</a>
+            </div>
+            <div class="blog-box1">
+                <div class="blog-img">
+                    <img src="images/nature1.jpg" alt="Blog">
+                </div>
+                
+                    <p>
+                        Nepal's mountains embody a sublime beauty that captivates the soul.The Himalayas, adorned with majestic peaks like Mount Everest, present an awe-inspiring spectacle against the azure sky. Their snow-clad summits, towering with ethereal grace, create a breathtaking panorama. Beyond sheer grandeur, the Annapurna and Langtang ranges offer enchanting landscapes of rhododendron forests and terraced fields. These mountains, cradling serene lakes and ancient glaciers, narrate tales of resilience and timelessness. Nepal's mountainous beauty is a testament to nature's artistry, drawing adventurers and seekers alike into a realm where tranquility and majesty converge in a mesmerizing dance of elevation and wonder.Nepal's Himalayan region extends beyond Mount Everest, embracing the Annapurna and Langtang ranges, each with its unique allure. Rhododendron forests, terraced fields, and serene lakes dot the landscape, offering enchanting vistas for trekkers and nature enthusiasts. These sacred peaks are not merely geographical entities; they embody a spiritual significance deeply embedded in the cultural tapestry of Nepal.</p>
+            </div>
+            <div class="blog-box1">
+                
+                    <img src="images/mountain.jpg" alt="Blog">
+                        
+                        <p>
+
+                            The Himalayas serve as a playground for adventure seekers, drawing mountaineers and trekkers from around the globe. Yet, beyond the thrill of the ascent, these mountains foster a profound sense of tranquility, inviting introspection and connection with nature. The diverse ecosystems, from alpine meadows to high-altitude deserts, harbor unique flora and fauna, contributing to the region's ecological significance.
+                            
+                            Nepal's Himalayas are not just a geographical marvel; they symbolize the country's indomitable spirit and resilience. As the birthplace of countless rivers, including the sacred Ganges, these towering peaks provide life-sustaining resources to the plains below. The Himalayas of Nepal, with their unmatched beauty and cultural significance, stand as a beacon of inspiration and a source of profound spiritual energy.
+                            The Himalayan panorama in Nepal is a living canvas, featuring peaks like Makalu, Cho Oyu, Dhaulagiri, and many more. From vantage points like Gokyo Ri, Kala Patthar, and Mardi Himal, the expansive views showcase a symphony of ice and rock, where the play of light and shadow creates a dynamic spectacle.
+
+                            In Nepal, the beauty of the mountains isn't just a visual treat; it's interwoven with the culture and spirituality of the people. The mountains are considered sacred, and many are adorned with prayer flags and stupas. Local communities, such as the Sherpas, have a deep connection to the mountains, and their way of life is intricately linked to these colossal peaks.
+
+                            Nepal's mountain beauty is a testament to the Earth's grandeur, where every step unveils a breathtaking panorama and every sunrise illuminates the peaks with a golden glow. It's a destination that beckons adventurers, spiritual seekers, and those simply yearning for a glimpse of nature's most awe-inspiring creations. The mountains of Nepal stand as not just geographical features but as timeless sentinels of wonder and inspiration.
+                        </p>
+                
+
+            </div>
+        </div>
+        </div>
+    
+    </section>
+
+    <script>
+        function toggleNav() {
+            var nav = document.querySelector('nav ul');
+            nav.style.visibility = (nav.style.visibility === 'visible') ? 'hidden' : 'visible';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width ,initial-scale=1">
+    <title>NEPAL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/nepal1.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="index.html">NATURE.GO</a></h1>
+        <span id="toggle-btn" onclick="toggleNav()">☰</span>
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="temples.html">Temples</a></li>
+                <li><a href="mountains.html">Mountains</a></li>
+            </ul>
+            <span id="close-btn" onclick="toggleNav()">✕</span>
+        </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var sidebar = document.getElementById('sidebar');
+            var toggleBtn = document.getElementById('toggle-btn');
+            var closeBtn = document.getElementById('close-btn');
+
+            function toggleNav() {
+                sidebar.classList.toggle('show');
+            }
+
+           
+
+            toggleBtn.addEventListener('click', function () {
+                toggleNav();
+                document.addEventListener('click', closeNavOutside);
+            });
+
+            closeBtn.addEventListener('click', function () {
+                toggleNav();
+                document.removeEventListener('click', closeNavOutside);
+            });
+        });
+    </script>
+
+    <section id="blog">
+        <div class="blog-heading">
+            <span>Recent Posts</span>
+          
+        </div>
+        <div class="blog-box9">
+        <div class="blog-container1">
+            <div class="blog-texthome">
+                <span>13 November 2023</span>
+                <a href="#" class="blog-title">Temples</a>
+            </div>
+            
+            <div class="blog-box1">
+                <img src="images/temple2.jpg" alt="Blog">
+                
+                    <p>Nepal's temples stand as timeless marvels, exuding beauty and spiritual resonance. From the intricate carvings of Kathmandu's Durbar Square to the serene elegance of Pashupatinath, each temple tells a story of artistry and devotion.
+                        At the heart of Nepal's religious landscape stands Pashupatinath Temple in Kathmandu, one of the holiest shrines for Hindus worldwide. This UNESCO World Heritage Site is dedicated to Lord Shiva and draws pilgrims, sadhus, and devotees who come to pay homage, seek blessings, and perform rituals along the sacred Bagmati River.Also known as the Monkey Temple, Swayambhunath is a revered Buddhist stupa overlooking the Kathmandu Valley. This ancient site holds both Hindu and Buddhist significance, reflecting Nepal's religious harmony. The stupa's lofty dome is adorned with the watchful eyes of Buddha, symbolizing wisdom and compassion.Nepal is proud to be the birthplace of Siddhartha Gautama, who later became Gautama Buddha. Lumbini, a UNESCO World Heritage Site, is a pilgrimage destination for Buddhists from around the globe. The sacred garden, Maya Devi Temple, and the Ashoka Pillar commemorate the life and teachings of the enlightened one.
+                    </p>
+                    
+                        
+            </div>
+            <div class="blog-box1">
+                <img src="images/pasupatinath.jpg" alt="Blog">
+                    
+                    <p>The ancient architecture, adorned with vibrant colors and symbolic details, reflects Nepal's rich cultural tapestry. Devotees and visitors alike are captivated by the palpable sense of divinity within these sacred spaces.     
+                    
+                    Whether exploring the UNESCO-listed Bhaktapur Durbar Square or marveling at the pagodas of Patan, Nepal's temples offer a glimpse into a world where beauty intertwines seamlessly with the divine, creating an unparalleled spiritual experience.
+                    The ancient cities of Bhaktapur and Patan boast intricate medieval architecture and house numerous temples. Bhaktapur's Durbar Square is adorned with temples like Nyatapola and Bhairabnath, showcasing exquisite craftsmanship. Similarly, Patan Durbar Square features Krishna Mandir and Hiranya Varna Mahavihar, showcasing the fusion of religion and art.
+
+                    Religion in Nepal is not just confined to temples; it permeates daily life through rituals, festivals, and cultural practices. Dashain and Tihar, two major Hindu festivals, bring communities together in celebration, while the colorful and vibrant Indra Jatra in Kathmandu reflects the cultural dynamism of the region.
+
+                    In this land of temples, religion serves as a guiding force, offering solace, inspiration, and a profound connection to the divine. The diverse religious heritage of Nepal enriches the spiritual tapestry of the country, making it a captivating destination for those seeking both cultural immersion and profound spiritual experiences.
+
+
+
+
+
+
+
+
+                    </p>
+                    
+            </div>
+            
+        </div>
+        <script>
+            function toggleNav() {
+                var nav = document.querySelector('nav ul');
+                nav.style.visibility = (nav.style.visibility === 'visible') ? 'hidden' : 'visible';
+            }
+        </script>
+    </body>
+    
+    </html>

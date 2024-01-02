@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NATURE.GO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/nepal1.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="index.html">NATURE.GO</a></h1>
+        <span id="toggle-btn" onclick="toggleNav()">☰</span>
+        <nav class="sidebar" id="sidebar">
+            
+            <ul>
+                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="temples.html">Temples</a></li>
+                <li><a href="mountains.html">Mountains</a></li>
+            </ul>
+            <span id="close-btn" onclick="toggleNav()">✕</span>
+        </nav>
+        
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var sidebar = document.getElementById('sidebar');
+                var toggleBtn = document.getElementById('toggle-btn');
+                var closeBtn = document.getElementById('close-btn');
+    
+                function toggleNav() {
+                    sidebar.classList.toggle('show');
+                    
+                }
+    
+                
+    
+                toggleBtn.addEventListener('click', function () {
+                    toggleNav();
+                    document.addEventListener('click', closeNavOutside);
+                });
+    
+                closeBtn.addEventListener('click', function () {
+                    toggleNav();
+                    document.removeEventListener('click', closeNavOutside);
+                });
+           
+            });
+    
+        </script>
+
+    <section id="blog">
+        
+        <div class="blog-heading">
+            
+            <span>Recent Posts</span>
+            
+        </div>
+        
+
+        <div class="blog-container">
+            <div class="blog-box">
+                <div class="blog-img">
+                    <a href="home.html">
+                        <img src="images/culture1.jpg" alt="Blog">
+                    </a>
+                </div>
+                <div class="blog-text">
+                    <span>13 November 2023</span>
+                    <a href="home.html" class="blog-title">Culture</a>
+                    <p>Nepal, nestled in the heart of the Himalayas, boasts a rich and diverse cultural tapestry that reflects its centuries-old history and the amalgamation of various ethnic groups. The cultural heritage of Nepal is deeply intertwined with its religious and social practices, creating a unique and vibrant atmosphere.
+
+                        Religion plays a pivotal role in Nepali culture, with Hinduism being the predominant faith. The country is dotted with ancient temples, stupas, and shrines, each telling a story of devotion and spirituality. Pashupatinath Temple in Kathmandu, a UNESCO World Heritage Site, stands as a testament to the significance of religion in Nepali life, attracting pilgrims and tourists alike.</p>
+                      
+                    <a href="home.html">Read More</a>
+                </div>
+            </div>
+        
+    
+            <div class="blog-box">
+                <div class="blog-img">
+                    <a href="rmtemple.html">
+                        <img src="images/temple1o2.jpg" alt="Blog">
+                    </a>
+                </div>
+                <div class="blog-text">
+                    <span>13 November 2023</span>
+                    <a href="rmtemple.html" class="blog-title">Temples</a>
+                    <p>Nepal's temples stand as timeless marvels, exuding beauty and spiritual resonance. From the intricate carvings of Kathmandu's Durbar Square to the serene elegance of Pashupatinath, each temple tells a story of artistry and devotion. The ancient architecture, adorned with vibrant colors and symbolic details, reflects Nepal's rich cultural tapestry. Devotees and visitors alike are captivated by the palpable sense of divinity within these sacred spaces. Whether exploring the UNESCO-listed Bhaktapur Durbar Square or marveling at the pagodas of Patan, Nepal's temples offer a glimpse into a world where beauty intertwines seamlessly with the divine, creating an unparalleled spiritual experience.
+                    </p>
+                    <a href="rmtemple.html">Read More</a>
+                </div>
+            </div>
+        
+        
+            <div class="blog-box">
+                <div class="blog-img">
+                    <a href="rmmountain.html">
+                        <img src="images/nature1.jpg" alt="Blog">
+                    </a>
+                </div>
+                <div class="blog-text">
+                    <span>13 November 2023</span>
+                    <a href="rmmountain.html" class="blog-title">Mountains</a>
+                    <p>
+                        Nepal's mountains embody a sublime beauty that captivates the soul. The Himalayas, adorned with majestic peaks like Mount Everest, present an awe-inspiring spectacle against the azure sky. Their snow-clad summits, towering with ethereal grace, create a breathtaking panorama. Beyond sheer grandeur, the Annapurna and Langtang ranges offer enchanting landscapes of rhododendron forests and terraced fields. These mountains, cradling serene lakes and ancient glaciers, narrate tales of resilience and timelessness. Nepal's mountainous beauty is a testament to nature's artistry, drawing adventurers and seekers alike into a realm where tranquility and majesty converge in a mesmerizing dance of elevation and wonder.
+                    </p>
+                    <a href="rmmountain.html">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <script>
+        function toggleNav() {
+            var nav = document.querySelector('nav ul');
+            nav.style.visibility = (nav.style.visibility === 'visible') ? 'hidden' : 'visible';
+        }
+    </script>
+</body>
+
+</html>
